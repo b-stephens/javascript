@@ -27,3 +27,5 @@ button.addEventListener('click',function() {
 h1.className = 'text-center';
 p.classList.add('col-sm-8', 'col-sm-offset-2');
 p.style.textAlign = 'justify';
+
+//
