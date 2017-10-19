@@ -1,31 +1,75 @@
-var body = document.getElementsByTagName('body')[0];
-var button = document.createElement('button');
-var h1 = document.createElement('h1');
-var p = document.createElement('p');
+/*var pTag = document.getElementById('myPTag');
+pTag.addEventListener('click', function(e) {
+    console.log(this.id, "fired ptag click");
+})*/
 
-body.appendChild(button);
-button.textContent = 'Click Me';
-button.className = 'center-block';
-button.style.marginTop = '100px';
-button.addEventListener('click',function() {
-    let title = prompt('What is your favorite movie?');
-    body.appendChild(h1);
-    h1.textContent=(title);
-    if (title.includes('')) {
-        let things = prompt('What did you do today?');
-        body.appendChild(p);
-        p.textContent=(things);
-        if (things.includes('')) {
-            let color = prompt('What is your favorite color?');
-            p.style = 'background-color:'+color;
-        }
-    } else {
-        title;
-    }
-});
+/*function checkScope() {
+    let name = 'Bryan';
+    console.log(name);
+};
 
-h1.className = 'text-center';
-p.classList.add('col-sm-8', 'col-sm-offset-2');
-p.style.textAlign = 'justify';
+var obj = {
+    a: checkScope
+};*/
 
-//
+//Object.create({key, value});
+
+/*
+var checkScope = function() {                      doesn't work here
+    console.log(this, 'this inside checkScope');
+*/
+
+/*
+obj.a();
+console.log(obj.a, 'obj.a in the global context');*/
+
+
+/*let myVar = 'this is a string';
+function myFunc() {
+    let myVar = 'this is another string';
+    console.log(myVar, 'inside the function');
+}
+
+console.log(myVar, 'outside the function');*/
+
+//myFunc();
+
+
+/*var stringObj = 'this is a string';
+console.log(stringObj.length);
+console.log(Object.getPrototypeOf(stringObj));
+
+var array = [1, 2, 3];
+array[1];
+array.1;*/
+
+//var newObj = Object.create({david: 'is cool'})
+// console.log(newObj['david']);
+// console.log(newObj.david);
+
+/*
+var newObj = {
+    firstName: 'Bryan',
+    lastName: 'Stephens',
+    age: '35'
+};
+
+console.log(newObj);*/
+
+
+
+
+var myNewUser;
+function user(username, password) {
+    this.userName = username;
+    this.password = password;
+};
+
+function gatherInfo() {
+    var userName = prompt('Enter a valid username', 'User Name');
+    var password = prompt('Enter a password', 'password');
+    myNewUser = new user(userName, password);
+    console.log(myNewUser);
+}
+
+gatherInfo();
