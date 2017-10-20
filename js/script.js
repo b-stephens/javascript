@@ -1,75 +1,78 @@
-/*var pTag = document.getElementById('myPTag');
-pTag.addEventListener('click', function(e) {
-    console.log(this.id, "fired ptag click");
-})*/
+/*
+var timer;
 
-/*function checkScope() {
-    let name = 'Bryan';
-    console.log(name);
+function setDelay() {
+    timer = setTimeout(popup, 5000);
 };
 
-var obj = {
-    a: checkScope
+function popup() {
+    alert('Buy some stuff');
+};
+
+setDelay();
+
+function cancelPopup() {
+    clearTimeout(popup);
+}
+
+var annoyingAdd = setInterval(starTrekAd, 3000);
+function starTrekAd () {
+    alert('star trek ad');
+}
+
+function clearAdd() {
+    clearInterval(annoyingAdd);
 };*/
 
-//Object.create({key, value});
 
-/*
-var checkScope = function() {                      doesn't work here
-    console.log(this, 'this inside checkScope');
-*/
+/*var time = prompt('Enter a time to you want to wait');
+function timer() {
+    var something
+    var setTimer = parseInt(time);
+    setTimer = setTimeout(something, 3000);
+}*/
 
-/*
-obj.a();
-console.log(obj.a, 'obj.a in the global context');*/
-
-
-/*let myVar = 'this is a string';
-function myFunc() {
-    let myVar = 'this is another string';
-    console.log(myVar, 'inside the function');
-}
-
-console.log(myVar, 'outside the function');*/
-
-//myFunc();
-
-
-/*var stringObj = 'this is a string';
-console.log(stringObj.length);
-console.log(Object.getPrototypeOf(stringObj));
-
-var array = [1, 2, 3];
-array[1];
-array.1;*/
-
-//var newObj = Object.create({david: 'is cool'})
-// console.log(newObj['david']);
-// console.log(newObj.david);
-
-/*
-var newObj = {
-    firstName: 'Bryan',
-    lastName: 'Stephens',
-    age: '35'
+/*function promptForTimeout() {
+    var interval = prompt('enter a time (in milliseconds) you want to wait');
+    var parsedInterval = parseInt(interval);
+    if(isNaN(parsedInterval)) {
+        return interval;
+    } else {
+        setTimeout(alertFn, parsedInterval);
+    }
+    askForInterval();
 };
 
-console.log(newObj);*/
-
-
-
-
-var myNewUser;
-function user(username, password) {
-    this.userName = username;
-    this.password = password;
+function alertFn() {
+    var randomThing = Math.random();
+    alert(randomThing);
 };
 
-function gatherInfo() {
-    var userName = prompt('Enter a valid username', 'User Name');
-    var password = prompt('Enter a password', 'password');
-    myNewUser = new user(userName, password);
-    console.log(myNewUser);
-}
+function askForInterval() {
+    var rawInterval = alert('How often do you want to hear from me?(in Miliseconds)');
+    var parsedInterval = parseInt(rawInterval);
+    if(isNaN(parsedInterval)) {
+        return rawInterval;
+    } else {
+        setInterval(intervalAd, parsedInterval);
+    }
+};
 
-gatherInfo();
+function intervalAd() {
+    alert('Advertisement');
+};
+
+function killTimeout() {
+    clearTimeout(alertFn);
+};
+
+function killInterval() {
+    clearInterval(intervalAd);
+};*/
+
+function logIn() {
+    var un = prompt('User name');
+    var pw = prompt('password');
+    sessionStorage.setItem('user', un);
+};
+logIn()
