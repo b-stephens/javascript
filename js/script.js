@@ -47,8 +47,7 @@ array.1;*/
 // console.log(newObj['david']);
 // console.log(newObj.david);
 
-/*
-var newObj = {
+/*var newObj = {
     firstName: 'Bryan',
     lastName: 'Stephens',
     age: '35'
@@ -59,6 +58,7 @@ console.log(newObj);*/
 
 
 
+/*
 var myNewUser;
 function user(username, password) {
     this.userName = username;
@@ -72,4 +72,30 @@ function gatherInfo() {
     console.log(myNewUser);
 }
 
-gatherInfo();
+gatherInfo();*/
+
+/*
+var myObj = new Object(),
+    str = 'myString',
+    rand = Math.random(),
+    obj = new Object();
+
+myObj.type              = 'Dot syntax';
+myObj['date created']   = 'String with space';
+myObj[str]              = 'String value';
+myObj[rand]             = 'Random Number';
+myObj[obj]              = 'Object';
+myObj['']               = 'Even an empty string';
+
+console.log(myObj);
+*/
+
+/*
+var newObj = new Object();
+var listItem = document.getElementById('li');
+var editBtn = document.getElementById('button');
+var deleteBtn = document.getElementById('button');
+var checkBox = document.getElementById('input');
+
+newObj[listItem];
+console.log(newObj);*/
